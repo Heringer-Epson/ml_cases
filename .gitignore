@@ -1,0 +1,9 @@
+#pyc files
+./src/*.pyc
+
+#__pycaches__
+./src/__pycache__/
+./__pycache__/
+
+#Temp folder
+./temp/
