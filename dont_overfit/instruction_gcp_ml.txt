@@ -1,0 +1,30 @@
+#Create a bucket
+  -> Storage - new bucket
+  -> Upload folder using gui.
+* new vm instance.
+
+apt-get install python3-venv
+
+* Create virtual env
+  python3 -m venv .venvs/temp_env
+
+source .venvs/temp_env/bin/activate
+
+#Copy bucket to vm
+gsutil cp -r gs://eh-temp-bucket/dont_overfit .
+cd dont_overfit
+
+pip install -r req.yml
+
+	numpy==1.16
+	scipy==1.3
+	pandas==0.25
+	keras==2.3
+	tensorflow==1.1
+	seaborn==0.9
+	xgboost==0.90
+	lightgbm==2.3.1
+	jupyter==1.0
+
+Follow the instructions here to set up a jupyter notebook 
+https://towardsdatascience.com/running-jupyter-notebook-in-google-cloud-platform-in-15-min-61e16da34d52
